@@ -3,10 +3,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Pop Quiz</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Toi Doi</title>
 </head>
 <body>
+    <h1 class="title">Toi Doi 🗒️</h1>
+    <div class="tasksList">
+        <h2 class="task-list-title">My lists</h2>
+        <ul class="task-list-ul">
+            <li class="active-list">JavaScript</li>
+            <li>Bootstrap</li>
+            <li>SQL</li>
+        </ul>
+        <form action="">
+            <input 
+            type="text"
+            id="new-tasksList" 
+            class="new-list" 
+            placeholder="Add list"
+            aria-label="add list">
+            <button class="btn-list" aria-label="create new list">+</button>
+        </form>
+    </div>
+
+
+    <div class="toidoi-tasks">
+        <div class="toidoi-header">
+            <h2>JavaScript</h2>
+            <p>3 tasks remaining</p>
+        </div>
+        <div class="toidoi-body">
+            <div class="tasks">
+                <input type="checkbox" id="task-1">
+                <label for="task-1">
+                    <span class="custom-checkbox"></span>
+                    Make Toi Doi
+                </label>
+            </div>
+            <!-- Task#1 -->
+            <div class="tasks">
+                <input type="checkbox" id="task-2">
+                <label for="task-2">
+                    <span class="custom-checkbox"></span>
+                    Learn more about css
+                </label>
+            </div>
+            <!-- Task#2 -->
+            <div class="tasks">
+                <input type="checkbox" id="task-3">
+                <label for="task-3">
+                    <span class="custom-checkbox"></span>
+                    Explore!
+                </label>
+            </div>
+            <!-- Task#3 -->
+            
+            <div class="new-taskCreator">
+                <form action="">
+                    <input 
+                    type="text"
+                    id="new-tasks" 
+                    class="new-list" 
+                    placeholder="Add tasks"
+                    aria-label="add tasks">
+                    <button class="btn-tasks" aria-label="create new task">+</button>
+                </form>
+            </div>
+            <div class="delete-tasks">
+                <button class="btn delete">Clear completed tasks</button>
+                <button class="btn delete">Delete list</button>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
