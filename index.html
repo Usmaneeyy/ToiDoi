@@ -14,68 +14,70 @@
     <div class="tasksList">
         <h2 class="task-list-title">My lists</h2>
         <ul class="task-list-ul">
-            <li class="active-list">JavaScript</li>
-            <li>Bootstrap</li>
-            <li>SQL</li>
+            <li class="list-name active-list">JavaScript</li>
+            <li class="list-name ">Bootstrap</li>
+            <li class="list-name ">SQL</li>
         </ul>
         <form action="">
             <input 
             type="text"
-            id="new-tasksList" 
-            class="new-list" 
+            id="new-list" 
+            class="new list" 
             placeholder="Add list"
             aria-label="add list">
-            <button class="btn-list" aria-label="create new list">+</button>
+            <button class="btn create" aria-label="create new list">+</button>
         </form>
     </div>
 
-
     <div class="toidoi-tasks">
         <div class="toidoi-header">
-            <h2>JavaScript</h2>
-            <p>3 tasks remaining</p>
+            <h2 class="list-title">JavaScript</h2>
+            <p class="task-count">3 tasks remaining</p>
         </div>
         <div class="toidoi-body">
             <div class="tasks">
-                <input type="checkbox" id="task-1">
-                <label for="task-1">
-                    <span class="custom-checkbox"></span>
-                    Make Toi Doi
-                </label>
+                <div class="task">
+                    <input type="checkbox" id="task-1">
+                    <label for="task-1">
+                        <span class="custom-checkbox"></span>
+                        Make Toi Doi
+                    </label>
+                </div>
+                <!-- Task#1 -->
+                <div class="task">
+                    <input type="checkbox" id="task-2">
+                    <label for="task-2">
+                        <span class="custom-checkbox"></span>
+                        Learn more about css
+                    </label>
+                </div>
+                <!-- Task#2 -->
+                <div class="task">
+                    <input type="checkbox" id="task-3">
+                    <label for="task-3">
+                        <span class="custom-checkbox"></span>
+                        Explore!
+                    </label>
+                </div>
+                <!-- Task#3 -->
+                
+                <div class="new-taskCreator">
+                    <form action="">
+                        <input 
+                        type="text"
+                        id="new-task" 
+                        class="new task" 
+                        placeholder="Add tasks"
+                        aria-label="add tasks">
+                        <button class="btn create" aria-label="create new task">+</button>
+                    </form>
+                </div>
+                <div class="delete-tasks">
+                    <button class="btn delete">Clear completed tasks</button>
+                    <button class="btn delete">Delete list</button>
+                </div>
             </div>
-            <!-- Task#1 -->
-            <div class="tasks">
-                <input type="checkbox" id="task-2">
-                <label for="task-2">
-                    <span class="custom-checkbox"></span>
-                    Learn more about css
-                </label>
-            </div>
-            <!-- Task#2 -->
-            <div class="tasks">
-                <input type="checkbox" id="task-3">
-                <label for="task-3">
-                    <span class="custom-checkbox"></span>
-                    Explore!
-                </label>
-            </div>
-            <!-- Task#3 -->
             
-            <div class="new-taskCreator">
-                <form action="">
-                    <input 
-                    type="text"
-                    id="new-tasks" 
-                    class="new-list" 
-                    placeholder="Add tasks"
-                    aria-label="add tasks">
-                    <button class="btn-tasks" aria-label="create new task">+</button>
-                </form>
-            </div>
-            <div class="delete-tasks">
-                <button class="btn delete">Clear completed tasks</button>
-                <button class="btn delete">Delete list</button>
-            </div>
         </div>
     </div>
 
