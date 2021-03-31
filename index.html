@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> -->
@@ -11,6 +12,12 @@
 </head>
 <body>
     <h1 class="title">Toi Doi 🗒️</h1>
+    <form class="search" id="search">
+        <input class="new" type="text" id="username" placeholder="Search tasks..">
+        <button class="btn btn-search" type="submit" form="search">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
     <div class="tasksList">
         <h2 class="task-list-title">My lists</h2>
         <ul class="task-list-ul">
@@ -48,7 +55,7 @@
                     <input type="checkbox" id="task-2">
                     <label for="task-2">
                         <span class="custom-checkbox"></span>
-                        Learn more about css
+                        Learn more about css 
                     </label>
                 </div>
                 <!-- Task#2 -->
@@ -74,7 +81,7 @@
                 </div>
                 <div class="delete-tasks">
                     <button class="btn delete">Clear completed tasks</button>
-                    <button class="btn delete">Delete list</button>
+                    <button class="btn delete red">Delete list</button>
                 </div>
             </div>
             

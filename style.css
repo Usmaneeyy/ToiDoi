@@ -12,8 +12,9 @@
     --clr-dark : #202020;
     --clr-white : #ffffff;
     --clr-bright : #F7F9FA;
+    --clr-grey: #dadada;
     --clr-accent : #1dd05d;
-    --clr-warning : rgb(99,36,36);
+    --clr-warning : #E83737;
 }
 
 body{
@@ -26,6 +27,7 @@ body{
     display: grid;
     grid: 
         "header header header header" auto
+        "search search search search" auto
         "...... lists active ......." auto / 
         1fr minmax(100px,300px) minmax(250px,500px) 1fr;
     
@@ -42,9 +44,16 @@ h1{
     font-weight: 900;
     color: var(--clr-accent);
     font-size: calc(4vw + 2rem);
-    margin: -0.1em 0 0.2em 0.5em;
+    margin: -0.1em 0 0.1em 0;
     letter-spacing: -0.06em;
 }
+
+.search {
+    grid-area: search;
+    justify-content: center;
+    flex-direction: row-reverse; 
+}
+
 .tasksLIst {
     grid-area: lists;
 }
@@ -74,10 +83,37 @@ form{
     padding: 0;
     color: inherit;
 }
+
+.btn-search {
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    transition: color 200ms ease-in;
+}
+.btn-search:hover{
+    color: var(--clr-accent);
+}
+
 .btn.create {
     font-size: 1.5rem;
     font-weight: 900;
     margin-right: 0.25rem;
+}
+
+.btn.delete{
+    font-weight: 600;
+    opacity: 0.8;
+    font-size: 1rem;
+    transition :color 200ms;
+}
+.red{
+    color: inherit;
+    transition: color 100ms ease-in;
+}
+.btn.delete.red:hover{
+    color: var(--clr-warning);
+}
+.btn.delete:hover{
+    color: var(--clr-accent);
 }
 
 .new {
@@ -118,10 +154,11 @@ form{
 }
 
 .toidoi-tasks{
+    border-radius: 5%;
     --spacer: 2rem;
-
     grid-area: active;
     background: var(--clr-bright);
+    box-shadow: 10px 10px 10px var(--clr-grey);
 }
 
 .toidoi-header {
@@ -230,12 +267,30 @@ form{
     color: var(--clr-dark);
 }
 
-.btn.delete{
-    font-weight: 600;
-    opacity: 0.8;
-    font-size: 1rem;
-    transition :color 200ms;
-}
-.btn.delete:hover{
-    color: var(--clr-accent);
-}
+/* MEDIA QUERIES */
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+    }
+    .toidoi-tasks{
+        background-color: var(--clr-dark);
+        box-shadow: 10px 10px 10px rgb(0, 0, 0);
+    }
+    .new,
+    .btn{
+        color: var(--clr-bright);
+    }
+    [type="checkbox"]:checked + label .custom-checkbox{
+        background: var(--clr-accent);
+        border-color: var(--clr-white);
+    }
+    .task::after,
+    .task label::after{
+        background: #ffffff;
+    }
+  }
+
+@media (prefers-color-scheme: light) {
+    /* Light theme styles go here */
+  }
