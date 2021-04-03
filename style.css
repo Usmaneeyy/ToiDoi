@@ -154,9 +154,9 @@ form{
 }
 
 .toidoi-tasks{
+    grid-area: active;
     border-radius: 5%;
     --spacer: 2rem;
-    grid-area: active;
     background: var(--clr-bright);
     box-shadow: 10px 10px 10px var(--clr-grey);
 }
@@ -291,6 +291,3 @@ form{
     }
   }
 
-@media (prefers-color-scheme: light) {
-    /* Light theme styles go here */
-  }
